@@ -1,0 +1,79 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                             http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>JerseyServlet</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>com.example.api.ProductResource</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>JerseyServlet</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+    </web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Jersey Servlet Configuration -->
+<!--    <servlet>-->
+<!--        <servlet-name>JerseyServlet</servlet-name>-->
+<!--        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>-->
+<!--        <init-param>-->
+<!--            <param-name>jersey.config.server.provider.packages</param-name>-->
+<!--            <param-value>com.example.api</param-value> &lt;!&ndash; Package where your resource classes are located &ndash;&gt;-->
+<!--        </init-param>-->
+
+<!--        <init-param>-->
+<!--            <param-name>jersey.config.server.provider.classnames</param-name>-->
+<!--            <param-value>org.glassfish.jersey.jackson.JacksonFeature</param-value> &lt;!&ndash; Enable JSON support &ndash;&gt;-->
+<!--        </init-param>-->
+<!--        <load-on-startup>1</load-on-startup>-->
+<!--    </servlet>-->
+
+<!--    &lt;!&ndash; Jersey Servlet Mapping &ndash;&gt;-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>JerseyServlet</servlet-name>-->
+<!--        <url-pattern>/api/*</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    &lt;!&ndash; Security Configuration &ndash;&gt;-->
+<!--    <security-constraint>-->
+<!--        <web-resource-collection>-->
+<!--            <web-resource-name>API Resources</web-resource-name>-->
+<!--            <url-pattern>/api/*</url-pattern>-->
+<!--        </web-resource-collection>-->
+<!--        <auth-constraint>-->
+<!--            <role-name>user</role-name>-->
+<!--        </auth-constraint>-->
+<!--    </security-constraint>-->
+
+<!--    <security-role>-->
+<!--        <role-name>user</role-name>-->
+<!--    </security-role>-->
+
+<!--</web-app>-->
